@@ -1,6 +1,9 @@
 import pygame
 import sys
 import time
+from snake import Snake
+
+snake = Snake()
 
 pygame.init()
 
@@ -8,6 +11,7 @@ WIDTH, HEIGHT = 1600, 1600
 CELL_SIZE = 30
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Snake Unleashed")
+pygame.display.set_icon(pygame.image.load("img/logo.jpeg"))
 
 snake_loading_image = pygame.image.load("img/snake_u.jpeg")
 snake_loading_image = pygame.transform.scale(snake_loading_image, (WIDTH, HEIGHT))
@@ -15,8 +19,7 @@ snake_loading_image = pygame.transform.scale(snake_loading_image, (WIDTH, HEIGHT
 main_snake_bg = pygame.image.load("img/main_snake.png")
 main_snake_bg = pygame.transform.scale(main_snake_bg, (WIDTH, HEIGHT))
 
-play_button_image = pygame.image.load("img/play.jpg")
-play_button_image = pygame.transform.scale(play_button_image, (100, 40))
+play_button_image = pygame.image.load("img/play.png")
 
 font = pygame.font.SysFont("Arial", 40)
 clock = pygame.time.Clock()
@@ -62,12 +65,12 @@ def show_loading_screen(duration=3):
         pygame.display.update()
         clock.tick(60)
 
+
 def main_menu():
     running = True
     while running:
-        screen.blit(snake_loading_image, (0, 0))
-
-        draw_button_with_image(play_button_image, WIDTH // 2 - 100, HEIGHT - 150, 200, 80)
+        screen.blit(main_snake_bg, (0, 0))
+        draw_button_with_image(play_button_image, WIDTH // 2 - 715 // 2, HEIGHT // 2, 715, 220)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
