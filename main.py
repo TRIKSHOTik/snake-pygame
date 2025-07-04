@@ -1,14 +1,12 @@
 import pygame
 import sys
 import time
-from snake import Snake
-
-snake = Snake()
+# from snake import Snake
 
 pygame.init()
 
 WIDTH, HEIGHT = 1600, 1600
-CELL_SIZE = 30
+
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Snake Unleashed")
 pygame.display.set_icon(pygame.image.load("img/logo.jpeg"))
@@ -22,8 +20,8 @@ main_snake_bg = pygame.transform.scale(main_snake_bg, (WIDTH, HEIGHT))
 play_button_image = pygame.image.load("img/play.png")
 
 font = pygame.font.SysFont("Arial", 40)
-clock = pygame.time.Clock()
 button_font = pygame.font.SysFont("Arial", 32)
+clock = pygame.time.Clock()
 
 
 def draw_button_with_image(image, x, y, w, h, action=None):
