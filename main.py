@@ -5,21 +5,21 @@ import time
 
 pygame.init()
 
-WIDTH, HEIGHT = 1600, 1600
+WIDTH, HEIGHT = 800, 800
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Snake Unleashed")
-pygame.display.set_icon(pygame.image.load("img/logo.jpeg"))
+pygame.display.set_icon(pygame.image.load("snake-pygame\img\logo.jpeg"))
 
-snake_loading_image = pygame.image.load("img/snake_u.jpeg")
+snake_loading_image = pygame.image.load("snake-pygame\img\snake_u.jpeg")
 snake_loading_image = pygame.transform.scale(snake_loading_image, (WIDTH, HEIGHT))
 
-main_snake_bg = pygame.image.load("img/main_snake.png")
+main_snake_bg = pygame.image.load("snake-pygame\img\main_snake.png")
 main_snake_bg = pygame.transform.scale(main_snake_bg, (WIDTH, HEIGHT))
 
-play_button_image = pygame.image.load("img/play.png")
+play_button_image = pygame.image.load("snake-pygame\img\play.png")
 
-font = pygame.font.SysFont("Arial", 40)
+font = pygame.font.SysFont("Etna", 40)
 button_font = pygame.font.SysFont("Arial", 32)
 clock = pygame.time.Clock()
 
